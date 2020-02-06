@@ -41,7 +41,7 @@ ENV SECURITYKEY=8cbc6f7363529215
 #   20    | 河南联通      | √ 在线        | 河南三门峡联通 
 #   21    | 香港阿里云轻量| √ 在线        | 只能建站 禁止违法和擦边球 禁止大流量 
 #   22    | 日本东京CN2   | √ 在线        | 可建站 禁止大流量内容 
-ENV HOSTID=15
+ENV HOSTID=14
 
 #--VOLUME 指令--`
 VOLUME ["/etc/sakurafrp"]
@@ -53,6 +53,8 @@ WORKDIR /etc/sakurafrp
 COPY ./FILE/* /etc/sakurafrp/
 
 #--RUN 指令--
+RUN echo '${SECURITYKEY}|${HOSTID}' > frp_user.txt
+
 RUN chmod +x frpc_linux_amd64
 
 #--EXPOSE 指令--
