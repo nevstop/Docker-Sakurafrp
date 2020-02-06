@@ -10,10 +10,12 @@ FROM alpine:${alpine_version}
 
 #--LABEL 指令--
 LABEL AUTHOR=yao Orgnization=NEVSTOP
-LABEL version="0.1"
+LABEL version="0.3"
+LABEL SakuraFrp_APP="frpc_linux_amd64"
+LABEL SakuraFrp_Service_Version="2.0"
 LABEL description="This is a Frp Service Provide by https://www.natfrp.com/"
 LABEL ServiceHostWebsite="https://www.natfrp.com/"
-LABEL ServiceDate="2020.2.5"
+LABEL ServiceDate="2020.2.6"
 
 #--ENV 指令--
 # Host SecurityKey
@@ -43,23 +45,24 @@ ENV SECURITYKEY=8cbc6f7363529215
 #   22    | 日本东京CN2   | √ 在线        | 可建站 禁止大流量内容 
 ENV HOSTID=14
 
-#--VOLUME 指令--`
-VOLUME ["/etc/sakurafrp"]
+#--VOLUME 指令--
+# 使用参数传递，无需使用VOLUME 指令
 
 #--WORKDIR 指令--
 WORKDIR /etc/sakurafrp
 
 #--ADD 指令/COPY 指令--
-COPY ./FILE/* /etc/sakurafrp/
+COPY ./FILE/frpc_linux_amd64 /etc/sakurafrp/
 
 #--RUN 指令--
-RUN echo '${SECURITYKEY}|${HOSTID}' > frp_user.txt
-
 RUN chmod +x frpc_linux_amd64
 
 #--EXPOSE 指令--
 # 由于是内网穿透，需要使用HOST NETWORK，所以无需使用EXPOSE指令。
 
+#-------------------------------------------
+# ./frpc_linux_amd64 -t 访问密钥 -s 服务器ID
+#-------------------------------------------
 #--CMD 指令--
-CMD ["./frpc_linux_amd64"] 
+CMD ./frpc_linux_amd64 -t ${SECURITYKEY} -s ${HOSTID}
 
