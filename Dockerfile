@@ -3,10 +3,10 @@
 #| 多行连续字符在注释里是不被支持
 
 #--ARG 指令--
-ARG ubuntu_version=14.04
+ARG alpine_version=3.7
 
 #--FROM 指令--
-FROM ubuntu:${ubuntu_version}
+FROM alpine:${alpine_version}
 
 #--LABEL 指令--
 LABEL AUTHOR=yao Orgnization=NEVSTOP
