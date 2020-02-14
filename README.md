@@ -11,3 +11,36 @@ SAKURA FRP 是完全免费的的内网穿透服务，支持 Windows、Linux、Ma
 2. 在管理面板获取ID。
 3. 在管理面板编辑内网穿透的映射关系，获取服务器编号。
 4. 创建 Docker Container.
+
+### 已知的服务器列表（截至2020.2.13)
+
+```
+#--LABEL 指令--
+LABEL AUTHOR                    = yao Orgnization = NEVSTOP
+LABEL version                   = "0.3"
+LABEL description               = "This is a Frp Service Provide by https://www.natfrp.com/"
+LABEL ServiceHostWebsite        = "https://www.natfrp.com/"
+LABEL SakuraFrp_APP             = "frpc_linux_amd64"
+LABEL SakuraFrp_Service_Version = "2.0"
+LABEL SakuraFrp_SECURITYKEY     = "注册后，从网页端获取"
+LABEL SakuraFrp_HostID_1        = "镇江电信      | 镇江电信高防 100M "
+LABEL SakuraFrp_HostID_2        = "宿迁移动      | 宿迁移动高防 200M "
+LABEL SakuraFrp_HostID_3        = "枣庄多线      | 北方联通移动推荐使用 150M "
+LABEL SakuraFrp_HostID_5        = "香港DMIT      | 香港DMIT 可建站 100M "
+LABEL SakuraFrp_HostID_6        = "镇江电信2     | 镇江电信高防 100M "
+LABEL SakuraFrp_HostID_7        = "美国洛杉矶    | 美国洛杉矶 可建站 100M "
+LABEL SakuraFrp_HostID_9        = "福州电信      | 福州电信高防 100M "
+LABEL SakuraFrp_HostID_10       = "日本东京      | 日本东京 可建站 1Gbps "
+LABEL SakuraFrp_HostID_11       = "香港CTG       | 国际宽带 国内访问质量不佳 可建站 "
+LABEL SakuraFrp_HostID_12       = "俄勒冈AWS     | 俄勒冈AWS 可建站 100M "
+LABEL SakuraFrp_HostID_13       = "香港Gigs      | PCCW线路 可建站 200M "
+LABEL SakuraFrp_HostID_14       = "香港CMI       | 香港CMI 可建站 100M "
+LABEL SakuraFrp_HostID_15       = "徐州多线      | 徐州多线BGP 100M "
+LABEL SakuraFrp_HostID_16       = "镇江双线      | 镇江双线高防 100M "
+LABEL SakuraFrp_HostID_17       = "镇江联通      | 镇江联通单线 100M "
+LABEL SakuraFrp_HostID_18       = "镇江电信3     | 镇江电信 100M "
+LABEL SakuraFrp_HostID_19       = "香港CN2       | 禁止大流量如MC 可建站 "
+LABEL SakuraFrp_HostID_20       = "河南联通      | 河南三门峡联通 "
+LABEL SakuraFrp_HostID_21       = "香港阿里云轻量| 只能建站 禁止违法和擦边球 禁止大流量 "
+LABEL SakuraFrp_HostID_22       = "日本东京CN2   | 可建站 禁止大流量内容 "
+```
