@@ -46,7 +46,7 @@ LABEL SakuraFrp_HostID_22       = "日本东京CN2   | 可建站 禁止大流量
 
 #--ENV 指令--
 # Host SecurityKey Provided By SakuraFrp
-ENV SECURITYKEY=8cbc6f7363529215
+ENV SECURITYKEY=XXXXXXXXXXXXXXXXXX
 # Host ID Provided By SakuraFrp
 ENV HOSTID=14
 
